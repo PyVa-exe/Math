@@ -27,6 +27,8 @@ put _math::output = _math::num1 + _math::num2;
 push _math::output;
 push _math::address;
 
+return;
+
 
 """"""""""""""""""""""""""""""""
 lab math::sub;
@@ -46,6 +48,8 @@ put _math::output = _math::num1 - _math::num2;
 push _math::output;
 push _math::address;
 
+return;
+
 
 """"""""""""""""""""""""""""""""
 lab math::mul;
@@ -59,6 +63,12 @@ put _math::address = 0;
 pull _math::address;
 pull _math::number;
 pull _math::factor;
+
+sub math::mul:loop;
+
+return;
+
+return;
 
 
 """"""""""""""""""""""""""""""""
@@ -89,6 +99,8 @@ lab math::mul:return;
 push _math::output;
 push _math::address;
 
+return;
+
 
 """""""""""""""""""""""""""""""""
 lab math::div;
@@ -103,7 +115,7 @@ lab math::sqr;
 
 
 """""""""""""""""""""""""""""""""
-lab math::sqrroot;
+lab math::sqrt;
 
 "this feature is not implemented yet, look out for future versions
 

@@ -39,6 +39,8 @@ put _math::output = _math::num1 + _math::num2;
 push _math::output;
 push _math::address;
 
+return;
+
 
 """"""""""""""""""""""""""""""""
 
@@ -71,6 +73,8 @@ put _math::output = _math::num1 - _math::num2;
 push _math::output;
 push _math::address;
 
+return;
+
 
 """"""""""""""""""""""""""""""""
 
@@ -96,7 +100,9 @@ pull _math::factor;
 
 "This is based on bitwise multiplication. If you want to know, how this works, visit this website: https://en.wikipedia.org/wiki/Ancient_Egyptian_multiplication
 
-jump math::mul:loop;
+sub math::mul:loop;
+
+return;
 
 
 """"""""""""""""""""""""""""""""
@@ -112,6 +118,8 @@ put _math::factor = _math::factor << 1;
 
 jump math::mul:loop;
 
+return;
+
 
 """""""""""""""""""""""""""""""""
 lab math::mul:add;
@@ -126,6 +134,8 @@ lab math::mul:return;
 
 push _math::output;
 push _math::address;
+
+return;
 
 
 """""""""""""""""""""""""""""""""
