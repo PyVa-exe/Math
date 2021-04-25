@@ -68,8 +68,6 @@ sub math::mul:loop;
 
 return;
 
-return;
-
 
 """"""""""""""""""""""""""""""""
 lab math::mul:loop;
@@ -83,6 +81,8 @@ put _math::number = _math::number >> 1;
 put _math::factor = _math::factor << 1;
 
 jump math::mul:loop;
+
+return;
 
 
 """""""""""""""""""""""""""""""""
