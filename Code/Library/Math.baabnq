@@ -27,7 +27,7 @@ put _math::output = _math::num1 + _math::num2;
 push _math::output;
 push _math::address;
 
-return;
+jump math::return;
 
 
 """"""""""""""""""""""""""""""""
@@ -48,7 +48,7 @@ put _math::output = _math::num1 - _math::num2;
 push _math::output;
 push _math::address;
 
-return;
+jump math::return;
 
 
 """"""""""""""""""""""""""""""""
@@ -66,7 +66,7 @@ pull _math::factor;
 
 sub math::mul:loop;
 
-return;
+jump math::return;
 
 
 """"""""""""""""""""""""""""""""
@@ -106,16 +106,22 @@ return;
 lab math::div;
 
 "this feature is not implemented yet, look out for future versions
+jump math::return;
 
 
 """""""""""""""""""""""""""""""""
 lab math::sqr;
 
 "this feature is not implemented yet, look out for future versions
+jump math::return;
 
 
 """""""""""""""""""""""""""""""""
 lab math::sqrt;
 
 "this feature is not implemented yet, look out for future versions
+jump math::return;
 
+
+"""""""""""""""""""""""""""""""""
+lab math::return;
