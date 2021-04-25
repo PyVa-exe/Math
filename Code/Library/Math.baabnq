@@ -1,0 +1,96 @@
+"This  language is written by the one and only S1monr3dst0ne07 (wow)
+"This program is a library and so it's written by EvilShibe, the lazy and fat cat that writes the Libraries of Baabnq
+"
+" ---------------------------- Library-Version of Math.baabnq -------------------------------------------------------
+"
+"Baabnq is a open-source-programming language, like assembly but better. Baabnq stands for Better as Assembly, but not quite. Download Baabnq at
+"www.github.com/PyVa-exe/Baabnq/
+"
+"
+
+
+""""""""""""""""""""""""""""""""
+lab add;
+"(int num1, int num2)
+
+put _num1 = 0;
+put _num2 = 0;
+put _address = 0;
+put _output = 0;
+
+pull _address;
+pull _num1;
+pull _num2;
+
+put _output = _num1 + _num2;
+
+push _output;
+push _address;
+
+
+""""""""""""""""""""""""""""""""
+lab sub;
+"(int num1, int num2)
+
+put _num1 = 0;
+put _num2 = 0;
+put _address = 0;
+put _output = 0;
+
+pull _address;
+pull _num1;
+pull _num2;
+
+put _output = _num1 - _num2;
+
+push _output;
+push _address;
+
+
+""""""""""""""""""""""""""""""""
+lab mul;
+"(int num, int factor)
+
+put _number = 0;
+put _factor = 0;
+put _output = 0;
+put _address = 0;
+
+pull _address;
+pull _number;
+pull _factor;
+
+
+""""""""""""""""""""""""""""""""
+lab mul:loop;
+
+jump mul:return ~ _number == 0;
+
+put _bit0 = _number & 1;
+sub mul:add ~ _bit0 == 1;
+
+put _number = _number >> 1;
+put _factor = _factor << 1;
+
+jump mul:loop;
+
+
+"""""""""""""""""""""""""""""""""
+lab mul:add;
+
+put _output = _output + _factor;
+
+return;
+
+
+"""""""""""""""""""""""""""""""""
+lab mul:return;
+
+push _output;
+push _address;
+
+
+"""""""""""""""""""""""""""""""""
+lab div;
+
+"this feature is not implemented yet, look out for future versions
