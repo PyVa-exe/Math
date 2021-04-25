@@ -1,0 +1,146 @@
+"This  language is written by the one and only S1monr3dst0ne07 (wow)
+"This program is a library and so it's written by EvilShibe, the lazy and fat cat that writes the Libraries of Baabnq
+"
+" ---------------------------- Explanation-Version of Math.baabnq -------------------------------------------------------
+"
+"Baabnq is a open-source-programming language, like assembly but better. Baabnq stands for Better as Assembly, but not quite. Download Baabnq at
+"download the compiler at: https://www.github.com/PyVa-exe/Baabnq-Compiler/
+"download the S1monsAssembly_Intepreter at: https://www.github.com/PyVa-exe/S1monsAssembly_Intepreter-v3/
+"
+
+
+""""""""""""""""""""""""""""""""
+
+"first, a label called add is created
+
+lab math::add;
+"(int num1, int num2)
+
+"then the variables for the calculation are getting initialized or if already initialized,
+"reset them to 0.
+
+put _math::num1 = 0;
+put _math::num2 = 0;
+put _math::address = 0;
+put _math::output = 0;
+
+"After that, the values for num1 and num2 are getting pulled out of the stack
+
+pull _math::address;
+pull _math::num1;
+pull _math::num2;
+
+"Then output is getting the value of the calculation: num1 + num2.
+
+put _math::output = _math::num1 + _math::num2;
+
+"output is then getting pushed onto the stack and the program is finished.
+
+push _math::output;
+push _math::address;
+
+
+""""""""""""""""""""""""""""""""
+
+"first, a label called sub is created
+
+lab math::sub;
+"(int num1, int num2)
+
+"then the variables for the calculation are getting initialized or if already initialized,
+"reset them to 0.
+
+put _math::num1 = 0;
+put _math::num2 = 0;
+put _math::address = 0;
+put _math::output = 0;
+
+"After that, the values for num1 and num2 are getting pulled out of the stack
+
+pull _math::address;
+pull _math::num1;
+pull _math::num2;
+
+"then output is getting the value of the calculation: num1 + num2.
+"ATTENTION: IF THE RESULT IS NEGATIVE, AN INTEGER-UNDERFLOW IS OCCURING
+
+put _math::output = _math::num1 - _math::num2;
+
+"output is then getting pushed onto the stack and the program is finshed.
+
+push _math::output;
+push _math::address;
+
+
+""""""""""""""""""""""""""""""""
+
+"first, a label called mul is created
+lab math::mul;
+"(int num, int factor)
+
+"then the variables for the calculation are getting initialized or if already initialized,
+"reset them to 0.
+
+put _math::number = 0;
+put _math::factor = 0;
+put _math::output = 0;
+put _math::address = 0;
+
+"After that, the values for the number and the factor are getting pulled out of the stack
+
+pull _math::address;
+pull _math::number;
+pull _math::factor;
+
+"Then jump to the loop, that multiplies the number with the factor.
+
+"This is based on bitwise multiplication. If you want to know, how this works, visit this website: https://en.wikipedia.org/wiki/Ancient_Egyptian_multiplication
+
+jump math::mul:loop;
+
+
+""""""""""""""""""""""""""""""""
+lab math::mul:loop;
+
+jump math::mul:return ~ _math::number == 0;
+
+put _math::bit0 = _math::number & 1;
+sub math::mul:add ~ _math::bit0 == 1;
+
+put _math::number = _math::number >> 1;
+put _math::factor = _math::factor << 1;
+
+jump math::mul:loop;
+
+
+"""""""""""""""""""""""""""""""""
+lab math::mul:add;
+
+put _math::output = _math::output + _math::factor;
+
+return;
+
+
+"""""""""""""""""""""""""""""""""
+lab math::mul:return;
+
+push _math::output;
+push _math::address;
+
+
+"""""""""""""""""""""""""""""""""
+lab math::div;
+
+"this feature is not implemented yet, look out for future versions
+
+
+"""""""""""""""""""""""""""""""""
+lab math::sqr;
+
+"this feature is not implemented yet, look out for furure versions
+
+
+"""""""""""""""""""""""""""""""""
+lab math::sqrt;
+
+"this feature is not implemented yet, look out for future versions
