@@ -2,7 +2,7 @@
  It's a library in baabnq for basic math
 
 download Baabnq Compiler: https://www.github.com/PyVa-exe/Baabnq-Compiler/
-download S1monsAssembly3_Intepreter: https://www.github.com/PyVa-exe/S1monsAssembly_Intepreter-v3/
+download S1monsAssembly3_Intepreter: https://github.com/PyVa-exe/S1monsAssembly3-Interpreter-v3
 
 If you want to use this library, you have to go into your directory of your compiler and intepreter and
 then download the code and paste the file Math.baabnq in the directory CODE/LIBRARY into the same directory as the intepreter
